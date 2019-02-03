@@ -1,3 +1,3 @@
-<p>
-  avatar works!
-</p>
+<div class="avatar" [ngClass]="{'avatar-active': active, 'avatar-inactive': !active}">
+  <img [src]="image" alt="" />
+</div>

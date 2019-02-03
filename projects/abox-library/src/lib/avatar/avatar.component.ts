@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'lib-avatar',
+  selector: 'abox-avatar',
   templateUrl: './avatar.component.html',
-  styleUrls: ['./avatar.component.css']
+  styleUrls: ['./avatar.component.scss']
 })
 export class AvatarComponent implements OnInit {
+  @Input() image: string;
+  @Input() active: boolean = true;
 
   constructor() { }
 

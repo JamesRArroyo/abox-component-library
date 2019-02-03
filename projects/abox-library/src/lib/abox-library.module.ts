@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
-import { AboxLibraryComponent } from './abox-library.component';
+import { CommonModule } from '@angular/common';
 import { AvatarComponent } from './avatar/avatar.component';
 
+
 @NgModule({
-  declarations: [AboxLibraryComponent, AvatarComponent],
-  imports: [
+  declarations: [
+    AvatarComponent,
   ],
-  exports: [AboxLibraryComponent]
+  imports: [
+    CommonModule,
+  ],
+  exports: [
+    AvatarComponent,
+  ],
 })
 export class AboxLibraryModule { }
