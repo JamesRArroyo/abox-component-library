@@ -8,7 +8,12 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "prefix": "app",
+          "styleext": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -134,7 +139,7 @@
       "root": "projects/abox-library",
       "sourceRoot": "projects/abox-library/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "abox",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
