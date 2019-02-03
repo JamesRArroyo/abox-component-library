@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "abox-library": [
+        "dist/abox-library"
+      ],
+      "abox-library/*": [
+        "dist/abox-library/*"
+      ]
+    }
   }
 }

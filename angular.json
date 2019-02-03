@@ -129,6 +129,41 @@
           }
         }
       }
+    },
+    "abox-library": {
+      "root": "projects/abox-library",
+      "sourceRoot": "projects/abox-library/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/abox-library/tsconfig.lib.json",
+            "project": "projects/abox-library/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/abox-library/src/test.ts",
+            "tsConfig": "projects/abox-library/tsconfig.spec.json",
+            "karmaConfig": "projects/abox-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/abox-library/tsconfig.lib.json",
+              "projects/abox-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "abox-component-library"
